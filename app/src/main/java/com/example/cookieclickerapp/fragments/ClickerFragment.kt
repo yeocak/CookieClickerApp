@@ -18,8 +18,6 @@ import kotlin.math.roundToLong
 
 class ClickerFragment : Fragment() {
 
-    lateinit var hey: Timer
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -37,24 +35,9 @@ class ClickerFragment : Fragment() {
         btnClick.setOnClickListener {
             CookieData.cookie+=CookieData.clickAdd
         }
-        hey()
     }
 
     override fun onStop() {
         super.onStop()
-        hey.cancel()
     }
-
-
-
-    fun hey(){
-        hey = fixedRateTimer("timer",false,0,100){
-            (activity as MainActivity).runOnUiThread {
-                CookieData.click()
-                tvCookieCount.text = String.format("%.1f", CookieData.cookie)
-            }
-        }
-    }
-
-
 }

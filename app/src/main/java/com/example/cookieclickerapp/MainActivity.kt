@@ -8,6 +8,7 @@ import android.os.Looper
 import android.provider.CalendarContract
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -32,9 +33,17 @@ class MainActivity : AppCompatActivity() {
         *  Make animations
         * Second counter
         * Upgrade images
-        * Crash bug fixes
         * Add README
         * */
+
+        fixedRateTimer("timer",true,0,100){
+            runOnUiThread {
+                CookieData.click()
+                supportFragmentManager.findFragmentById(R.id.mainFragment)?.view?.findViewById<TextView>(R.id.tvCookieCount)?.apply {
+                    text = String.format("%.1f", CookieData.cookie)
+                }
+            }
+        }
 
     }
 
