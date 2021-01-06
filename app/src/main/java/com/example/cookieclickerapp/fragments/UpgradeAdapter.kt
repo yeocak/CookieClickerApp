@@ -1,17 +1,14 @@
 package com.example.cookieclickerapp.fragments
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cookieclickerapp.MainActivity
 import com.example.cookieclickerapp.R
 import com.example.cookieclickerapp.datas.CookieData
 import com.example.cookieclickerapp.datas.SingleUpgrade
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.single_upgrade.view.*
 
 class UpgradeAdapter(
@@ -54,8 +51,12 @@ class UpgradeAdapter(
             }
 
             btnBuy.setOnClickListener {
-                CookieData.upgradeList[position].count += 1
-                CookieData.cookie-=curUp.cost
+                CookieData.apply {
+                    upgradeList[position].count += 1
+                    cookie-=curUp.cost
+
+                    everyMiniSecond += curUp.value
+                }
                 curUp.cost += ((0.2)*curUp.cost).toLong()
 
                 if(position != upgradeList.size-1){

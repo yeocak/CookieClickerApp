@@ -1,24 +1,15 @@
 package com.example.cookieclickerapp
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.provider.CalendarContract
-import android.util.Log
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.example.cookieclickerapp.datas.CookieData
 import com.example.cookieclickerapp.fragments.ClickerFragment
 import com.example.cookieclickerapp.fragments.UpgradeFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_clicker.*
-import java.util.*
 import kotlin.concurrent.fixedRateTimer
 
 class MainActivity : AppCompatActivity() {
@@ -30,15 +21,17 @@ class MainActivity : AppCompatActivity() {
         menuChange(ClickerFragment())
 
         /* TODO
-        *  Make animations
-        * Second counter
+        * Make animations
+        * Make settings tab:(Change theme, hack mode, go github, back, help)
         * Upgrade images
         * Add README
         * */
 
         fixedRateTimer("timer",true,0,100){
             runOnUiThread {
-                CookieData.click()
+                CookieData.apply {
+                    cookie += everyMiniSecond
+                }
                 supportFragmentManager.findFragmentById(R.id.mainFragment)?.view?.findViewById<TextView>(R.id.tvCookieCount)?.apply {
                     text = String.format("%.1f", CookieData.cookie)
                 }
