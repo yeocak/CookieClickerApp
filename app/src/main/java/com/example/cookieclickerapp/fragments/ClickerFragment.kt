@@ -29,6 +29,7 @@ class ClickerFragment : Fragment() {
             CookieData.cookie+=CookieData.clickAdd
         }
 
-        tvEverySecond.text = "Every second:\n${CookieData.everyMiniSecond*10}"
+        tvEverySecond.text = "Every second:\n${String.format("%.1f", CookieData.everyMiniSecond*10)}"
+
     }
 }

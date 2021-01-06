@@ -1,11 +1,15 @@
 package com.example.cookieclickerapp.fragments
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import androidx.core.widget.ImageViewCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cookieclickerapp.MainActivity
 import com.example.cookieclickerapp.R
 import com.example.cookieclickerapp.datas.CookieData
 import com.example.cookieclickerapp.datas.SingleUpgrade

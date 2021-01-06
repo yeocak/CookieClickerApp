@@ -16,4 +16,24 @@
     <color name="customGray">#808684</color>
     <color name="customHalfLittleBlack">#663A3335</color>
     <color name="customHalfBlack">#B43A3335</color>
+    <color name="customTransparent">#00FFFFFF</color>
+
+    <color name="customUp0">#bc313c</color>
+    <color name="customUp1">#d8a331</color>
+    <color name="customUp2">#0f8e82</color>
+    <color name="customUp3">#4866ad</color>
+    <color name="customUp4">#2d2d2d</color>
+    <color name="customUp5">#ea6974</color>
+    <color name="customUp6">#301730</color>
+    <color name="customUp7">#a39e72</color>
+    <color name="customUp8">#0b5882</color>
+    <color name="customUp9">#cc7630</color>
+    <color name="customUp10">#082609</color>
+    <color name="customUp11">#e506a2</color>
+    <color name="customUp12">#b21114</color>
+    <color name="customUp13">#36c4a5</color>
+    <color name="customUp14">#f2f085</color>
+    <color name="customUp15">#ffcecc</color>
+    <color name="customUp16">#d5c2f9</color>
+
 </resources>

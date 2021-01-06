@@ -11,11 +11,11 @@ object CookieData {
     var upgradeList = mutableListOf<SingleUpgrade>(
         SingleUpgrade("Boost 1",10,isOpen = true, value = 0.01,count = 0),
         SingleUpgrade("Boost 2",100, value = 0.2),
-        SingleUpgrade("Boost 3",1000, value = 5.0),
-        SingleUpgrade("Boost 4",10000, value = 20.0),
-        SingleUpgrade("Boost 5",100000, value = 220.0),
-        SingleUpgrade("Boost 6",1000000, value = 2200.0),
-        SingleUpgrade("Boost 7",10000000, value = 22000.0),
+        SingleUpgrade("Boost 3",1000, value = 3.0),
+        SingleUpgrade("Boost 4",10000, value = 14.0),
+        SingleUpgrade("Boost 5",100000, value = 83.0),
+        SingleUpgrade("Boost 6",1000000, value = 976.0),
+        SingleUpgrade("Boost 7",10000000, value = 9453.0)
     )
 
 }
