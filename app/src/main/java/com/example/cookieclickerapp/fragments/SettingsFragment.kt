@@ -28,10 +28,24 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+            swAnimation.isChecked = CookieData.animation
+            etClick.setText(CookieData.clickAdd.toString())
+
         btnGithub.setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://github.com/yeocak/CookieClickerApp")
             startActivity(intent)
+        }
+
+        swAnimation.setOnCheckedChangeListener { buttonView, isChecked ->
+                CookieData.animation = swAnimation.isChecked
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        etClick.text?.let {
+            CookieData.clickAdd = etClick.text.toString().toInt()
         }
     }
 }

@@ -27,8 +27,6 @@ class MainActivity : AppCompatActivity() {
 
         /* TODO
         * Make animations
-        * Make settings tab:(hack mode, go github, help)
-        * Upgrade images
         * Add README
         * */
 

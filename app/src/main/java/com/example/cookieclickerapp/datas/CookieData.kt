@@ -18,4 +18,6 @@ object CookieData {
         SingleUpgrade("Boost 7",10000000, value = 9453.0)
     )
 
+    var animation = true
+
 }
