@@ -12,3 +12,5 @@ This is a basic cookie clicker game.
 ### If you want, you can on or off the click animation or change click value.
 
 ![](https://raw.githubusercontent.com/yeocak/CookieClickerApp-NotFinished/master/ForGithub/settings.png)
+------------
+In this project i use OOP rules to clean code. I used the animations for first time.
