@@ -16,19 +16,10 @@ import kotlin.concurrent.fixedRateTimer
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_main)
 
-
-
         menuChange(ClickerFragment())
-
-        /* TODO
-        * Make animations
-        * Add README
-        * */
 
         fixedRateTimer("timer",true,0,100){
             runOnUiThread {
